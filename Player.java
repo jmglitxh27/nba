@@ -22,7 +22,8 @@ public class Player{
 
 	// Default constructor
 	class Player(){
-		pname = "Default";
+		pFname = "Default";
+		pLname = "Default";
 		ppg = 0.0;
 		rpg = 0.0;
 		apg = 0.0;
@@ -35,8 +36,10 @@ public class Player{
 	}
 
 	// Constructor with parameters
-	class Player(pname, ppg, rpg, apg, blocks, steals, ptime, height, pcollege, pbday){
-		pname = "Default";
+	class Player(String pFname, String pLname, double ppg, double rpg, double apg, double blocks, 
+		double steals, double ptime, double height, String pcollege, String pbday){
+		pFname = this.pFname;
+		pLName = this.pLname;
 		ppg = this.ppg;
 		rpg = this.rpg;
 		apg = this.apg;
@@ -48,6 +51,48 @@ public class Player{
 		pbday = this.pbday;
 	}
 
-	
+	// Constructor with name, college, height in meters, and birthday
+	class Player(String pFname, String pLname, double height, String pcollege, String pbday){
+		pFname = this.pFname;
+		pLName = this.pLname;
+		ppg = 0.0;
+		rpg = 0.0
+		apg = 0.0
+		blocks = 0.0;
+		steals = 0.0;
+		ptime = 0.0;
+		height = this.height;
+		pcollege = this.pcollege;
+		pbday = this.pbday;
+	}
+
+	// Accessors and mutators
+	public accessPlayerName(){
+		return pname;
+	}
+
+	public setPlayerName(String pname){
+		pname = this.pname;
+	}
+
+	public accessPPG(){
+		return ppg;
+	}
+
+	public setPPG(double ppg){
+		ppg = this.ppg;
+	}
+
+	public accessRPPG(){
+		return rppg;
+	}
+
+	public setRPPG(double rppg){
+		rppg = this.rppg;
+	}
+
+	public accessAPG(double rppg){
+		return apg;
+	}
 
 }
