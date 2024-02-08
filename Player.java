@@ -1,6 +1,8 @@
 public class Player{
-	// Player Age
-	private String pname;
+	// Player first name
+	private String fname;
+	// Player last name
+	private String lname;
 	// Number of points
 	private double ppg;
 	// Number of rebounds
@@ -13,7 +15,7 @@ public class Player{
 	private double steals;
 	// Average time played
 	private double ptime;
-	// Player height
+	// Player height in meters
 	private double height;
 	// Player College
 	private String pcollege;
@@ -21,9 +23,9 @@ public class Player{
 	private String pbday;
 
 	// Default constructor
-	class Player(){
-		pFname = "Default";
-		pLname = "Default";
+	public Player(){
+		fname = "Default";
+		lname = "Default";
 		ppg = 0.0;
 		rpg = 0.0;
 		apg = 0.0;
@@ -36,62 +38,63 @@ public class Player{
 	}
 
 	// Constructor with parameters
-	class Player(String pFname, String pLname, double ppg, double rpg, double apg, double blocks, 
+	public Player(String fname, String lname, double ppg, double rpg, double apg, double blocks, 
 		double steals, double ptime, double height, String pcollege, String pbday){
-		pFname = this.pFname;
-		pLName = this.pLname;
-		ppg = this.ppg;
-		rpg = this.rpg;
-		apg = this.apg;
-		blocks = this.blocks;
-		steals = this.steals;
-		ptime = this.ptime;
-		height = this.height;
-		pcollege = this.pcollege;
-		pbday = this.pbday;
+		this.fname = fname;
+		this.lname = lname;
+		this.ppg = ppg;
+		this.rpg = rpg;
+		this.apg = apg;
+		this.blocks = blocks;
+		this.steals = steals;
+		this.ptime = ptime;
+		this.height = height;
+		this.pcollege = pcollege;
+		this.pbday = pbday;
 	}
 
 	// Constructor with name, college, height in meters, and birthday
-	class Player(String pFname, String pLname, double height, String pcollege, String pbday){
-		pFname = this.pFname;
-		pLName = this.pLname;
+	public Player(String fname, String lname, double height, String pcollege, String pbday){
+		this.fname = fname;
+		this.lname = lname;
 		ppg = 0.0;
-		rpg = 0.0
-		apg = 0.0
+		rpg = 0.0;
+		apg = 0.0;
 		blocks = 0.0;
 		steals = 0.0;
 		ptime = 0.0;
-		height = this.height;
-		pcollege = this.pcollege;
-		pbday = this.pbday;
+		this.height = height;
+		this.pcollege = pcollege;
+		this.pbday = pbday;
 	}
 
 	// Accessors and mutators
-	public accessPlayerName(){
-		return pname;
+	public String accessPlayerName(){
+		return fname + " " + lname;
 	}
 
-	public setPlayerName(String pname){
-		pname = this.pname;
+	public void setPlayerName(String fname, String lname){
+		this.fname = fname;
+		this.lname = lname;
 	}
 
-	public accessPPG(){
+	public double accessPPG(){
 		return ppg;
 	}
 
-	public setPPG(double ppg){
-		ppg = this.ppg;
+	public void setPPG(double ppg){
+		this.ppg = ppg;
 	}
 
-	public accessRPPG(){
-		return rppg;
+	public double accessRPPG(){
+		return rpg;
 	}
 
-	public setRPPG(double rppg){
-		rppg = this.rppg;
+	public void setRPPG(double rppg){
+		this.ppg = rpg;
 	}
 
-	public accessAPG(double rppg){
+	public double accessAPG(double rppg){
 		return apg;
 	}
 
